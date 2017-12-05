@@ -569,3 +569,9 @@ a, a:hover
     }
 }
 /****/
+
+
+img.thumb-img {
+    width: 100%;
+    height: auto;
+}
