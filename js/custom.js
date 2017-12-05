@@ -15,7 +15,7 @@
         var nav = $($anchor.attr('href'));
         if (nav.length) {
         $('html, body').stop().animate({				
-            scrollTop: $($anchor.attr('href')).offset().top				
+            scrollTop: $($anchor.attr('href')).offset().top	- 87
         }, 1500, 'easeInOutExpo');
         
         event.preventDefault();
