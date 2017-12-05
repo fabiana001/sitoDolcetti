@@ -484,7 +484,7 @@ a, a:hover
 }
 .contact-icon-container {
     position: absolute;
-    top: -38px;
+    top: -100px;
     right: 0;
     padding-right: 20px;
     font-size: 320px;
