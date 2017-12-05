@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
     <!-- =======================================================
         Theme Name: Bethany
         Theme URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
@@ -22,9 +23,8 @@
     <!--header-->
     <!--header class="main-header2" id="header2"-->
     <header>
-        <video id="mainvideo" poster="./img/video/Dolcetti1.png" playsinline autoplay muted loop>
+        <video id="mainvideo" poster="./img/video/Dolcetti1.mp4" playsinline autoplay muted loop>
             <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-            <source src="./img/video/Dolcetti2.webm" type="video/webm">
             <source src="./img/video/Dolcetti2.mp4" type="video/mp4">
         </video>
         <div class="bg-color">
@@ -96,16 +96,18 @@
                 </div>
 
                 <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
-                    <div id="caption"></div>
-                </div>
+                <!--<div id="myModal" class="modal">-->
+                    <!--<span class="close">&times;</span>-->
+                    <!--<img class="modal-content" id="img01">-->
+                    <!--<div id="caption"></div>-->
+                <!--</div>-->
 
                 <div class="col-md-9 col-sm-12">
                     <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img id="myImg" src="./img/immagini/shapeimage_2.png" alt="" class="img-responsive">
+                            <a href="./img/immagini/shapeimage_2.png" data-fancybox data-width="1024" data-height="768" data-caption="Caption esempio">
+                                <img id="myImg" src="./img/immagini/shapeimage_2.png" alt="" class="img-responsive">
+                            </a>
                         </div>
                     </div>
                     <!-- The Modal -->
@@ -121,8 +123,10 @@
                     </div>
                     <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
+                            <a href="./img/video/Dolcetti2.mp4" data-fancybox data-type="iframe" data-caption="Video">
+                                <img src="./img/immagini/Dolcetti1.png" alt="" class="img-responsive">
+                            </a>
                             <!--video autoplay loop src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" alt="" class="img-responsive"-->
-                            <video src="./img/video/Dolcetti2.mp4" class="img-responsive" />
                                 <!--img src="./img/immagini/shapeimage_4.png" alt="" class="img-responsive"-->
                         </div>
                     </div>
@@ -276,57 +280,64 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/custom.js"></script>
-    <script src="contactform/contactform.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!--<script src="contactform/contactform.js"></script>-->
 
-    <!--script>
+    <script>
         $(document).ready(function() {
-            var $lightbox = $('#lightbox');
+            $('[data-fancybox]').fancybox({
+                buttons: ['close']
 
-            $('[data-target="#lightbox"]').on('click', function(event) {
-                var $img = $(this).find('img'),
-                    src = $img.attr('src'),
-                    alt = $img.attr('alt'),
-                    css = {
-                        'maxWidth': $(window).width() - 100,
-                        'maxHeight': $(window).height() - 100
-                    };
-
-                $lightbox.find('.close').addClass('hidden');
-                $lightbox.find('img').attr('src', src);
-                $lightbox.find('img').attr('alt', alt);
-                $lightbox.find('img').css(css);
             });
-
-            $lightbox.on('shown.bs.modal', function (e) {
-                var $img = $lightbox.find('img');
-
-                $lightbox.find('.modal-dialog').css({'width': $img.width()});
-                $lightbox.find('.close').removeClass('hidden');
-            });
-        })
-    </script-->
+        });
+//            var $lightbox = $('#lightbox');
+//
+//            $('[data-target="#lightbox"]').on('click', function(event) {
+//
+//                var $img = $(this).find('img'),
+//                    src = $img.attr('src'),
+//                    alt = $img.attr('alt'),
+//                    css = {
+//                        'maxWidth': $(window).width() - 100,
+//                        'maxHeight': $(window).height() - 100
+//                    };
+//
+//                $lightbox.find('.close').addClass('hidden');
+//                $lightbox.find('img').attr('src', src);
+//                $lightbox.find('img').attr('alt', alt);
+//                $lightbox.find('img').css(css);
+//            });
+//
+//            $lightbox.on('shown.bs.modal', function (e) {
+//                var $img = $lightbox.find('img');
+//
+//                $lightbox.find('.modal-dialog').css({'width': $img.width()});
+//                $lightbox.find('.close').removeClass('hidden');
+//            });
+//        })
+    </script>
   <script>
 
       // Get the modal
-      var modal = document.getElementById('myModal');
-
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById('myImg');
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-      img.onclick = function(){
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = this.alt;
-      }
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-          modal.style.display = "none";
-      }
+//      var modal = document.getElementById('myModal');
+//
+//      // Get the image and insert it inside the modal - use its "alt" text as a caption
+//      var img = document.getElementById('myImg');
+//      var modalImg = document.getElementById("img01");
+//      var captionText = document.getElementById("caption");
+//      img.onclick = function(){
+//          modal.style.display = "block";
+//          modalImg.src = this.src;
+//          captionText.innerHTML = this.alt;
+//      }
+//
+//      // Get the <span> element that closes the modal
+//      var span = document.getElementsByClassName("close")[0];
+//
+//      // When the user clicks on <span> (x), close the modal
+//      span.onclick = function() {
+//          modal.style.display = "none";
+//      }
   </script>
     
   </body>
