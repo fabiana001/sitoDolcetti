@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Andrea Dolcetti Orafo</title>
+    <title>Andrea Dolcetti Artistic Lab</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
     <!--header-->
     <!--header class="main-header2" id="header2"-->
     <header>
-        <video poster="./img/video/Dolcetti1.png" playsinline autoplay muted loop>
+        <video id="mainvideo" poster="./img/video/Dolcetti1.png" playsinline autoplay muted loop>
             <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
             <source src="./img/video/Dolcetti2.webm" type="video/webm">
             <source src="./img/video/Dolcetti2.mp4" type="video/mp4">
@@ -36,13 +36,13 @@
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynavbar" aria-expanded="false" aria-controls="navbar">
                             <span class="fa fa-bars"></span>
                         </button>
-                            <a href="index.html" class="navbar-brand">Andrea </a> <a href="index.html" class="navbar-brand2">Gioielli</a>
+                            <a href="index.html" class="navbar-brand">Andrea </a> <a href="index.html" class="navbar-brand2">Dolcetti</a>
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="mynavbar">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#header">Home</a></li>
-                                <li><a href="#feature">Storia</a></li>
-                                <li><a href="#portfolio">Gallery</a></li>
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <!--li><a href="#feature">Storia</a></li-->
+                                <li><a href="#feature">Gallery</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
@@ -52,9 +52,9 @@
             <!--/ nav-->
             <div class="container text-center">
                 <div class="wrapper wow fadeInUp delay-05s" >
-                    <h2 class="top-title">Orafo</h2>
+                    <h2 class="top-title">Artistic Laboratory</h2>
                     <h3 class="title">Andrea Dolcetti</h3>
-                    <h4 class="sub-title">Modern jewelry, handmade in Rome</h4>
+                    <h4 class="sub-title">Modern Art, handmade in Rome</h4>
                     <!--button type="submit" class="btn btn-submit">Download Now</button-->
                 </div>
             </div>
@@ -83,12 +83,32 @@
                         <p class="sec-para">Love and passion for what we do.</p>
                     </div>
                 </div>
+                <!-- The Modal -->
+                <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+
                 <div class="col-md-9 col-sm-12">
                     <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="./img/immagini/shapeimage_2.png" alt="" class="img-responsive">
+                            <img id="myImg" src="./img/immagini/shapeimage_2.png" alt="" class="img-responsive">
                         </div>
                     </div>
+                    <!-- The Modal -->
                     <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
                             <img src="./img/immagini/shapeimage_3.png" alt="" class="img-responsive">
@@ -101,12 +121,14 @@
                     </div>
                     <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="img/port04.jpg" alt="" class="img-responsive">
+                            <!--video autoplay loop src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" alt="" class="img-responsive"-->
+                            <video src="./img/video/Dolcetti2.mp4" class="img-responsive" />
+                                <!--img src="./img/immagini/shapeimage_4.png" alt="" class="img-responsive"-->
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 padding-right-zero">
                         <div class="portfolio-box design">
-                            <img src="img/port05.jpg" alt="" class="img-responsive">
+                            <img src="img/immagini/Dolcetti1.png" alt="" class="img-responsive">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 padding-right-zero">
@@ -118,8 +140,6 @@
             </div>
         </div>
     </section>
-    <!---->
-    <!---->
     <!---->
     <!--section class="section-padding parallax bg-image-2 section wow fadeIn delay-08s" id="cta-2">
         <div class="container">
@@ -138,7 +158,7 @@
     </section-->
     <!---->
     <!---->
-    <section-- class="section-padding wow fadeInUp delay-02s" id="portfolio">
+    <section class="section-padding">
         <div class="container">
             <div class="row">
                 <div id="prova"></div>
@@ -183,56 +203,33 @@
                 </div-->
             </div>
         </div>
-    </section-->
+    </section>
     <!---->
     <!---->
-    <section class="section-padding wow fadeInUp delay-20s" id="contact">
+    <section class="section-padding wow fadeInUp delay-80s" id="contact">
         <div class="container">
             <div class="row white">
                 <div class="col-md-8 col-sm-12">
                     <div class="section-title">
                         <h2 class="head-title black">Contact Us</h2>
                         <hr class="botm-line">
-                        <p class="sec-para black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                        <p class="sec-para black"></p>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12">
-                    <div class="col-md-4 col-sm-6" style="padding-left:0px;">
-                        <h3 class="cont-title">Email Us</h3>
-                        <div id="sendmessage">Your message has been sent. Thank you!</div>
-                        <div id="errormessage"></div>
-                        <div class="contact-info">
-                            <form action="" method="post" role="form" class="contactForm">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                    <div class="validation"></div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                    <div class="validation"></div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                    <div class="validation"></div>
-                                </div>
-                                <button type="submit" class="btn btn-send">Send</button>
-                            </form>
-                        </div>
-                        
-                    </div>
                     <div class="col-md-4 col-sm-6">
-                        <h3 class="cont-title">Visit Us</h3>
+                        <h3 class="cont-title"></h3>
                         <div class="location-info">
-                            <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Via Principe Amedeo 9, Torino, Italy</p>
-                            <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0039 333 12 68 347</p>
-                            <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">hi@yourdomain.com</a></p>
+                            <p class="white"><span aria-hidden="true" class="fa fa-map-marker"></span>Vicolo Domizio, 3 00184 Roma, Italy</p>
+                            <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: +39 06 89 67 47 98</p>
+                            <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Mobile: +39 320 92 63 106</p>
+                            <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">info@andreadolcetti.it</a></p>
                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6" style="padding-left:0px;">
+                        <h3 class="cont-title"></h3>
+                        <div id="sendmessage"></div>
+                        <div id="errormessage"></div>
                     </div>
                     <div class="col-md-4">
                         <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
@@ -280,6 +277,57 @@
     <script src="js/wow.js"></script>
     <script src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
+
+    <!--script>
+        $(document).ready(function() {
+            var $lightbox = $('#lightbox');
+
+            $('[data-target="#lightbox"]').on('click', function(event) {
+                var $img = $(this).find('img'),
+                    src = $img.attr('src'),
+                    alt = $img.attr('alt'),
+                    css = {
+                        'maxWidth': $(window).width() - 100,
+                        'maxHeight': $(window).height() - 100
+                    };
+
+                $lightbox.find('.close').addClass('hidden');
+                $lightbox.find('img').attr('src', src);
+                $lightbox.find('img').attr('alt', alt);
+                $lightbox.find('img').css(css);
+            });
+
+            $lightbox.on('shown.bs.modal', function (e) {
+                var $img = $lightbox.find('img');
+
+                $lightbox.find('.modal-dialog').css({'width': $img.width()});
+                $lightbox.find('.close').removeClass('hidden');
+            });
+        })
+    </script-->
+  <script>
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById('myImg');
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  </script>
     
   </body>
 </html>
